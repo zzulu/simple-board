@@ -1,16 +1,20 @@
 <h1>Posts</h1>
 
+<p>
+Our board has <%= Post.public_count %> posts and counting!
+</p>
+
 <div>
   <%= link_to 'New Post', new_post_path %>
 </div>
 
 <ul>
   <% @posts.each do |post| %>
-  <li>
-    <h2>
-      <%= link_to post.title, post %>
-    </h2>
-  </li>
+    <% unless post.archived? %>
+      <li>
+        <%= link_to post.title, post %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 
