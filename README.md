@@ -1,3 +1,3 @@
-# Rails Rehabilitation
+# Simple Board
 
-Make simple board app.
+Simple board application for Ruby on Rails rehabilitation.
